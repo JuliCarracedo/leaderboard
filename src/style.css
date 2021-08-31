@@ -1,0 +1,9 @@
+input.my-2 {
+    width: 70%;
+}
+
+input.btn {
+    width: fit-content;
+    align-self: flex-end;
+    margin-right: 30%;
+}

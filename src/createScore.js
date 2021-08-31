@@ -1,7 +1,5 @@
-import Score from "./score";
+import Score from './score.js';
 
-const createScore = (player, score) => {
-   return new Score(player, score);
-}
+const createScore = (player, score) => new Score(player, score);
 
 export default createScore;

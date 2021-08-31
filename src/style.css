@@ -1,17 +1,17 @@
 input.my-2 {
-    width: 70%;
+  width: 70%;
 }
 
 input.btn {
-    width: fit-content;
-    align-self: flex-end;
-    margin-right: 30%;
+  width: fit-content;
+  align-self: flex-end;
+  margin-right: 30%;
 }
 
 .leaderboard {
-    margin: 5px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 5px;
+  margin: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
 }

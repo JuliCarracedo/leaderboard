@@ -12,7 +12,7 @@ const formScore = document.querySelector('input#score');
 const refresh = document.querySelector('button.btn');
 
 async function getStorage() {
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/3IGjFzzBEY0MX1krdUtm/scores/').then((response) => response.json()).then((json) => {
+  await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/3IGjFzzBEY0MX1krdUtm/scores/').then((response) => response.json()).then((json) => {
     const list = json.result;
     loadStored(list);
   });

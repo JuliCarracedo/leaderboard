@@ -1,5 +1,5 @@
 import Score from './score.js';
 
-const createScore = (player, score) => new Score(player, score);
+const createScore = (user, score) => new Score(user, score);
 
 export default createScore;

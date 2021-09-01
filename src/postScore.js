@@ -3,7 +3,7 @@ const postScore = (score) => {
   const newDiv = document.createElement('div');
   newDiv.classList.add('my-1', 'mx-2');
   newDiv.innerHTML = `
-        <p><strong>${score.player}:</strong> ${score.score}</p>
+        <p><strong>${score.user}:</strong> ${score.score}</p>
         <hr>
     `;
   table.appendChild(newDiv);

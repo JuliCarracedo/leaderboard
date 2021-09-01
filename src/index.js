@@ -2,29 +2,38 @@
 /* eslint no-restricted-globals: "off" */
 import css from './style.css';
 import createScore from './createScore.js';
-import postScore from './postScore.js';
-import getStorage from './getStorage.js';
 import loadStored from './loadStored.js';
+import postToAPI from './postToAPI.js';
+import emptyBoard from './emptyBoard.js';
 
 const form = document.querySelector('form');
 const formName = document.querySelector('input#name');
 const formScore = document.querySelector('input#score');
 const refresh = document.querySelector('button.btn');
-const list = getStorage();
-loadStored(list);
+
+async function getStorage() {
+  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/3IGjFzzBEY0MX1krdUtm/scores/').then((response) => response.json()).then((json) => {
+    const list = json.result;
+    loadStored(list);
+  });
+}
+
+getStorage();
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (formName.value === '' || formName.value === ' ' || formScore.value === '' || formScore.value === ' ') { return; }
   if (parseInt(formScore.value, 10) < 1) { return; }
   const score = createScore(formName.value, parseInt(formScore.value, 10));
-  postScore(score);
-  list.push(score);
-  list.sort((obj1, obj2) => obj2.score - obj1.score);
-  localStorage.setItem('scores', JSON.stringify(list));
-
+  postToAPI(score);
+  emptyBoard();
+  getStorage();
   formScore.value = '';
   formName.value = '';
 });
 
-refresh.addEventListener('click', (e) => { e.preventDefault(); location.reload(); });
+refresh.addEventListener('click', (e) => {
+  e.preventDefault();
+  emptyBoard();
+  getStorage();
+});

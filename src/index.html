@@ -9,21 +9,21 @@
 </head>
 <body class="container-fluid mt-5">
 
-    <h1 class="my-5 mx-3">Leaderboard</h1>
+    <h1 class="my-2 mx-3">Leaderboard</h1>
     <div class ="container-fluid row w-75 w mx-auto">
-        <section class="container-fluid col mx-5">
-            <h2 class="d-flex justify-content-between">Recent scores <button type="button" class="btn btn-secondary" id="refresh">Refresh</button></h2>
+        <section class="container-fluid col mx-5 future my-1">
+            <h2 class="d-flex justify-content-between">Recent scores <button type="button" class="btn btn-success" id="refresh">Refresh</button></h2>
             <div class="leaderboard my-5">
 
             </div>
         </section>
 
-        <section class="container-fluid col mx-5">
+        <section class="container-fluid col mx-5 future  my-1">
             <h2>Add your score</h2>
             <form id="new-score" class="d-flex flex-column my-5">
                 <input class="my-2" type="text" placeholder="Your name" id="name" name="name">
                 <input class="my-2" type="number" placeholder="Your score" id="score" name="score">
-                <input type="submit" class="btn btn-secondary" value="Submit">
+                <input type="submit" class="btn btn-success" value="Submit">
             </form>
         </section>
     </div>

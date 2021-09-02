@@ -1,17 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+h1,
+h2 {
+  font-family: 'Anton', sans-serif;
+  color: rgb(9, 209, 59);
+}
+
+body {
+  background-color: Black;
+}
+
+.future {
+  border-style: solid;
+  border-color:rgb(3, 105, 28);
+  border-width: 1px;
+  padding: 10px;
+  border-radius: 10px;
+  height: min-content;
+}
+
 input.my-2 {
-  width: 70%;
+  width: 100%;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(3, 105, 28);
+  font-size: 20px;
 }
 
 input.btn {
   width: fit-content;
   align-self: flex-end;
-  margin-right: 30%;
 }
 
 .leaderboard {
-  margin: 5px;
   border-width: 1px;
   border-style: solid;
   border-color: black;
   border-radius: 5px;
+  height: 350px;
+  overflow: scroll;
+  background-color: rgb(3, 105, 28);
+  border-radius: 10px;
+}
+
+#refresh {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.first {
+  background-color: rgb(245, 184, 31);
+}
+
+.second {
+  background-color: rgb(172, 186, 202);
+}
+
+.third {
+  background-color: rgb(173, 64, 0);
+}
+
+.score {
+  font-size: 20px;
+  height: 50px;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }

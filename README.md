@@ -4,7 +4,7 @@
 
 > This project is a leaderboard fed through a form that serves me to learn to connect my project to API's and async code.
 
-Additional description about the project and its features.
+![](./src/Captura.PNG)
 
 ## Built With
 

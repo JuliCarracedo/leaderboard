@@ -11,12 +11,13 @@ const formName = document.querySelector('input#name');
 const formScore = document.querySelector('input#score');
 const refresh = document.querySelector('button.btn');
 
-async function getStorage() {
-  await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/3IGjFzzBEY0MX1krdUtm/scores/').then((response) => response.json()).then((json) => {
-    const list = json.result;
-    loadStored(list);
-  });
-}
+const getStorage = async () => {
+  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/3IGjFzzBEY0MX1krdUtm/scores/')
+    .then((response) => response.json()).then((json) => {
+      const list = json.result;
+      loadStored(list);
+    });
+};
 
 getStorage();
 
